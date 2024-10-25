@@ -11,7 +11,7 @@ async function bootstrap() {
   );
   await app.listen(process.env.PORT ?? 8080, () => {
     console.log(
-      `Server is running in Mode: ${process.env.NODE_ENV} on Port: ${process.env.PORT ?? 8080}`,
+      `Server is running in Mode: ${process.env.NODE_ENV ?? 'local'} on Port: ${process.env.PORT ?? 8080}`,
     );
   });
 }
