@@ -1,0 +1,17 @@
+FROM node:20.16
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm install
+
+RUN npm run build
+
+RUN rm -rf ./src
+
+# Expose the port the app runs in
+EXPOSE 8080
+
+# npm run start:prod
+CMD ["npm", "run","start:prod"]

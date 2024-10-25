@@ -1,0 +1,18 @@
+# modules
+node_modules
+
+# test
+test
+
+# git
+.git
+.gitignore
+
+# logs
+.prettierrc
+Dockerfile
+README.md
+
+# environment variables
+.env
+.env.*
