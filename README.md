@@ -13,11 +13,15 @@
 
 RESTful API for Auth and crud Organization Collcetion with [Nest](https://github.com/nestjs/nest) framework.
 
+## Description
+
+> NestJs, MonogDB, Docker, JWT, Bcrypt
+
 ## Token
 
 > In order to use some of the endpoints you will need first to login and use your own token
 
-#### In Request headers add prop calls "token"
+#### In Request headers add prop calls "Authorization"
 
 #### example:
 
@@ -27,12 +31,6 @@ headers = {
 };
 ```
 
-#### And then send this as header, something like this
-
-```js
-response = requests.get(url, { headers });
-```
-
 ## API Endpoints
 
 <details>
@@ -40,8 +38,8 @@ response = requests.get(url, { headers });
 
 #### POST /auth/signup
 
-> ##### request body props: (\* means required)
->
+##### request body props: (\* means required)
+
 > - name\*: string, min length 2, max length 64
 > - email\*: valid email (---@---.---)
 > - password\*: string, min length 2, max length 64
@@ -252,7 +250,7 @@ response = requests.get(url, { headers });
 
 ## Installation and App Running
 
-> This project is configured with Docker
+> This project is configured with Docker on defualt Port: 8080
 
 ```bash
 # development
