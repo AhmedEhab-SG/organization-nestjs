@@ -46,8 +46,9 @@ response = requests.get(url, { headers });
 > - email\*: valid email (---@---.---)
 > - password\*: string, min length 2, max length 64
 
+#### request:
+
 ```json
-// request body example
 {
   "name": "Your Name",
   "email": "yourEmail@domain.com",
@@ -59,16 +60,18 @@ response = requests.get(url, { headers });
 
 > request an access_token and refresh_token
 
+#### request:
+
 ```json
-// request body example
 {
   "email": "yourEmail@domain.com",
   "password": "1234abCd!"
 }
 ```
 
+#### response:
+
 ```json
-// response body example
 {
   "message": "success",
   "user:": {
@@ -84,15 +87,17 @@ response = requests.get(url, { headers });
 
 > request an access_token
 
+#### request:
+
 ```json
-// request body example
 {
   "access_token": "yourUnqiueAccessToken"
 }
 ```
 
+#### response:
+
 ```json
-// response body example
 {
   "message": "success",
   "access_token": "yourNewUnqiueAccessToken"
@@ -103,15 +108,17 @@ response = requests.get(url, { headers });
 
 > request to delete your refresh token
 
+#### request:
+
 ```json
-// request body example
 {
   "refresh_token": "yourUnqiueAccessToken"
 }
 ```
 
+#### response:
+
 ```json
-// response body example
 {
   "message": "success"
 }
@@ -130,7 +137,7 @@ response = requests.get(url, { headers });
 > [!CAUTION]
 > Requires Token
 
-#### return:
+#### response:
 
 ```json
 [
@@ -157,7 +164,7 @@ response = requests.get(url, { headers });
 > [!CAUTION]
 > Requires Token
 
-#### return:
+#### response:
 
 ```json
 {
@@ -191,7 +198,7 @@ response = requests.get(url, { headers });
 - organization_members["email"]: string, a vaild email
 - organization_members["access_level"]: string, min length 2, max length 64 or "memeber"
 
-#### example:
+#### request:
 
 ```json
 {
@@ -221,7 +228,7 @@ response = requests.get(url, { headers });
 - email\*: string, a vaild email
 - access_level: string, min length 2, max length 64 or "memeber"
 
-#### example:
+#### request:
 
 ```json
 {
@@ -254,5 +261,3 @@ $ docker-compose -f docker.compose.dev.yml up --build
 # production
 $ docker-compose -f docker.compose.prod.yml up --build
 ```
-
-
