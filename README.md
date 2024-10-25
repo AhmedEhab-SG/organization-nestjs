@@ -250,7 +250,7 @@ headers = {
 
 ## Installation and App Running
 
-> This project is configured with Docker on defualt Port: 8080
+> This project is configured with Docker on default Port: 8080
 
 ```bash
 # development
